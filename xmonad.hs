@@ -34,7 +34,7 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
          , ("M-S-<Down>", shiftToNext ) -- move client to next workspace
          , ("M-S-<Up>" , shiftToPrev ) -- move client to prev workspace
          , ("M-p" , spawn "gmrun" ) -- app launcher
-	 , ("M-l" , spawn "gnome-screensaver-command -l" ) -- lock screen
+	 , ("M-S-l" , spawn "gnome-screensaver-command -l" ) -- lock screen
          , ("M-n" , spawn "wicd-client -n" ) -- network manager
          , ("M-f" , spawn "firefox" ) -- launch browser
          , ("M-S-a" , spawn "~/.bin/cpu min" ) -- cpu scaling
