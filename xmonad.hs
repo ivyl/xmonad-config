@@ -18,8 +18,8 @@ main = do
     { terminal    = "urxvt"
     , modMask     = mod4Mask
     , borderWidth = 1
-    , normalBorderColor = "#dddddd"
-    , focusedBorderColor = "#333333"
+    , normalBorderColor = "#333333"
+    , focusedBorderColor = "#666666"
     , logHook = myLogHook din
     , startupHook = myStartupHook
     , manageHook = manageDocks <+> manageHook defaultConfig
@@ -29,7 +29,6 @@ main = do
 
 myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classic alt-tab behaviour
          , ("M-<Return>" , dwmpromote ) -- swap the focused window and the master window
-         , ("M-<Tab>" , toggleWS ) -- toggle last workspace (super-tab)
          , ("M-<Down>" , nextWS ) -- go to next workspace
          , ("M-<Up>" , prevWS ) -- go to prev workspace
          , ("M-S-<Down>", shiftToNext ) -- move client to next workspace
@@ -43,11 +42,11 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
 
 myLogHook h = dynamicLogWithPP xmobarPP
             { ppHidden = xmobarColor "grey" "" --tag color
+	    , ppCurrent = xmobarColor "#3399ff" "" . wrap "[" "]"
             , ppOutput = hPutStrLn h           --tag list and window title
-            , ppTitle = xmobarColor "green" "" --window title color
+            , ppTitle = xmobarColor "#3399ff" "" --window title color
             }
-myStatusBar = "xmobar" --define first xmobar
+myStatusBar = "xmobar ~/.xmonad/xmobarrc" --define first xmobar
 myStartupHook :: X ()
 myStartupHook = do
-            spawn "xmobar ~/.xmobarrc2" --start second xmobar
-            spawn "~/scripts/startup.sh" --startup script
+            spawn "xmobar ~/.xmonad/xmobarrc2" --start second xmobar
