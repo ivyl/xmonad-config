@@ -1,0 +1,14 @@
+Config { font = "xft:Droid Sans Mono Dotted:pixelsize=12"
+       , bgColor = "black"
+       , fgColor = "grey"
+       , position = TopW L 100 
+       , commands = [ Run Date "%a %b %_d %l:%M" "date" 10
+                    , Run MultiCpu ["-L","3","-H","50","--normal","green","--high","red","-p","3","-t","Cpu: <total0>% <total1>%"] 10
+                    , Run Com "echo $(iwconfig wlan0 | grep -o 'ESSID:\".*\"') $(iwconfig wlan0 | grep -o 'Quality=[^ ]*' | sed s/Quality=//) '  ' " [] "wireless" 10
+                    , Run Com "awk '{print $1,$2,$3}' /proc/loadavg" [] "load" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%StdinReader% }{ %wireless% %load% %multicpu% <fc=#ee9a00>%date%</fc> "
+       }
