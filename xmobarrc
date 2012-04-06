@@ -3,7 +3,7 @@ Config { font = "xft:Droid Sans Mono Dotted:bold:pixelsize=12"
        , fgColor = "grey"
        , position = TopW L 100 
        , commands = [ Run Date "%a %b %_d %l:%M" "date" 10
-                    , Run Com "~/.xmonad/bin/wlan.sh" [] "wireless" 10
+                    , Run Com "~/.xmonad/bin/wlan.sh" [] "wireless" 50
                     , Run Network "wlan0" ["-L","0","-H","32","--normal","#3399ff","--high","#3399ff"] 10
                     , Run StdinReader
                     ]
