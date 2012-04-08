@@ -15,7 +15,7 @@ import System.IO -- hPutStrLn scope
 main = do
   din <- spawnPipe myStatusBar 
   xmonad $ defaultConfig
-    { terminal    = "urxvt"
+    { terminal    = "urxvtc"
     , modMask     = mod4Mask
     , borderWidth = 1
     , normalBorderColor = "#333333"
@@ -36,6 +36,8 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
          , ("M-p" , spawn "gmrun" ) -- app launcher
          , ("M-n" , spawn "wicd-client -n" ) -- network manager
          , ("M-f" , spawn "firefox" ) -- launch browser
+         , ("M-x" , spawn "wxHexEditor" ) -- hex editor
+         , ("M-S-h" , spawn "urxvtc -e htop" ) -- htop
          , ("M-S-a" , spawn "~/.bin/cpu min" ) -- cpu scaling
          , ("M-S-s" , spawn "~/.bin/cpu min" ) -- cpu scaling
          , ("M-S-d" , spawn "~/.bin/cpu max" ) -- cpu scaling
