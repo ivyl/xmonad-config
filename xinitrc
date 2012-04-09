@@ -4,14 +4,18 @@ xsetroot -cursor_name left_ptr
 #settings
 xrdb -merge ~/.Xresources
 setxkbmap -layout pl
-feh --bg-fill feh --bg-fill /home/l1/Pictures/wallpapers/A_Flying_Tree_by_vladstudio.jpg
+feh --bg-fill feh --bg-fill ~/.xmonad/background
+
+#hide mouse coursor when it isn't used
+unclutter &
+
+#clipboard synchronization
+autocutsel -fork &
+autocutsel -selection PRIMARY -fork &
 
 #apps
-parcellite &
 pulseaudio &
 gnome-screensaver &
-
-#urxvtd
 urxvtd &
 
 exec ck-launch-session xmonad
