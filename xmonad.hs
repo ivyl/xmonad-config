@@ -35,6 +35,7 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
          , ("M-S-<Up>" , shiftToPrev ) -- move client to prev workspace
          , ("M-p" , spawn "gmrun" ) -- app launcher
          , ("M-n" , spawn "wicd-client -n" ) -- network manager
+         , ("M-a" , spawn "urxvtc -e alsamixer" ) -- sound mixer
          , ("M-f" , spawn "firefox" ) -- launch browser
          , ("M-x" , spawn "wxHexEditor" ) -- hex editor
          , ("M-v" , spawn "gvim" ) -- gvim
