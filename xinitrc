@@ -13,6 +13,9 @@ unclutter &
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 
+#auto mount devices
+udiskie &
+
 #apps
 pulseaudio &
 gnome-screensaver &

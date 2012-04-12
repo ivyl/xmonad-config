@@ -40,6 +40,7 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
          , ("M-x" , spawn "wxHexEditor" ) -- hex editor
          , ("M-v" , spawn "gvim" ) -- gvim
          , ("M-S-h" , spawn "urxvtc -e htop" ) -- htop
+         , ("M-S-m" , spawn "urxvtc -e mutt" ) -- mutt
          , ("M-S-a" , spawn "~/.bin/cpu min" ) -- cpu scaling
          , ("M-S-s" , spawn "~/.bin/cpu min" ) -- cpu scaling
          , ("M-S-d" , spawn "~/.bin/cpu max" ) -- cpu scaling
