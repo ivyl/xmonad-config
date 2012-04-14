@@ -44,12 +44,12 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
          , ("M-S-a" , spawn "~/.bin/cpu min" ) -- cpu scaling
          , ("M-S-s" , spawn "~/.bin/cpu min" ) -- cpu scaling
          , ("M-S-d" , spawn "~/.bin/cpu max" ) -- cpu scaling
+	 , ("M-S-l" , spawn "gnome-screensaver-command -l" ) -- lock screen
          , ("C-M-<Delete>" , spawn "gksudo shutdown -r now" ) -- reboot
          , ("C-M-<Insert>" , spawn "gksudo shutdown -h now" ) -- poweroff
          , ("<XF86AudioRaiseVolume>", spawn "amixer -c 0 -- sset Master '2.00dB+'" ) -- volume up
          , ("<XF86AudioLowerVolume>", spawn "amixer -c 0 -- sset Master '1.00dB-'" ) -- volume down
          , ("<XF86Display>", spawn "arandr" )
-	 , ("<XF86ScreenSaver>" , spawn "gnome-screensaver-command -l" ) -- lock screen
          ]
 
 myLogHook h = dynamicLogWithPP xmobarPP
