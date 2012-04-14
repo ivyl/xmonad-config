@@ -3,6 +3,7 @@ xsetroot -cursor_name left_ptr
 
 #settings
 xrdb -merge ~/.Xresources
+xmodmap ~/.Xmodmap
 setxkbmap -layout pl
 feh --bg-fill feh --bg-fill ~/.xmonad/background
 
@@ -15,6 +16,9 @@ autocutsel -selection PRIMARY -fork &
 
 #auto mount devices
 udiskie &
+
+#dbus instance
+eval `dbus-launch --sh-syntax --exit-with-session`
 
 #apps
 pulseaudio &
