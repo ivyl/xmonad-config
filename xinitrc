@@ -14,9 +14,6 @@ unclutter &
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 
-#auto mount devices
-udiskie &
-
 #dbus instance
 eval `dbus-launch --sh-syntax --exit-with-session`
 
@@ -25,4 +22,4 @@ pulseaudio &
 gnome-screensaver &
 urxvtd &
 
-exec ck-launch-session xmonad
+exec ck-launch-session zsh -c "udiskie & xmonad"
