@@ -52,6 +52,7 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
          , ("<XF86Display>", spawn "arandr" )
          , ("<XF86KbdBrightnessDown>", spawn "sudo /opt/kbdlight/bin/kbdlight -" )
          , ("<XF86KbdBrightnessUp>", spawn "sudo /opt/kbdlight/bin/kbdlight +" )
+         , ("<XF86TouchpadToggle>", spawn "synclient TouchpadOff=$((($(synclient|grep TouchpadOff|grep -o '[01]')+1)%2))") -- toggle touchpad
          ]
 
 myLogHook h = dynamicLogWithPP xmobarPP
