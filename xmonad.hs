@@ -50,6 +50,8 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
          , ("<XF86AudioRaiseVolume>", spawn "amixer -c 0 -- sset Master '2.00dB+'" ) -- volume up
          , ("<XF86AudioLowerVolume>", spawn "amixer -c 0 -- sset Master '1.00dB-'" ) -- volume down
          , ("<XF86Display>", spawn "arandr" )
+         , ("<XF86KbdBrightnessDown>", spawn "sudo /opt/kbdlight/bin/kbdlight -" )
+         , ("<XF86KbdBrightnessUp>", spawn "sudo /opt/kbdlight/bin/kbdlight +" )
          ]
 
 myLogHook h = dynamicLogWithPP xmobarPP
