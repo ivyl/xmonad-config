@@ -3,8 +3,8 @@ xsetroot -cursor_name left_ptr
 
 #settings
 xrdb -merge ~/.Xresources
-xmodmap ~/.xmonad/Xmodmap
 setxkbmap -layout pl
+xmodmap ~/.xmonad/Xmodmap
 feh --bg-fill feh --bg-fill ~/.xmonad/background
 
 #hide mouse coursor when it isn't used
