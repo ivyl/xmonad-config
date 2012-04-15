@@ -3,7 +3,7 @@ xsetroot -cursor_name left_ptr
 
 #settings
 xrdb -merge ~/.Xresources
-xmodmap ~/.Xmodmap
+xmodmap ~/.xmonad/Xmodmap
 setxkbmap -layout pl
 feh --bg-fill feh --bg-fill ~/.xmonad/background
 
