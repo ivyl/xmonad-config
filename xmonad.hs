@@ -61,7 +61,7 @@ myLogHook h = dynamicLogWithPP xmobarPP
             , ppTitle = xmobarColor "#3399ff" "" --window title color
             }
 
-myStatusBar = "xmobar ~/.xmonad/xmobarrc" --define first xmobar
+myStatusBar = "xmobar ~/.xmonad/xmobar1.hs" --define first xmobar
 myStartupHook :: X ()
 myStartupHook = do
-            spawn "xmobar ~/.xmonad/xmobarrc2" --start second xmobar
+            spawn "xmobar ~/.xmonad/xmobar2.hs" --start second xmobar
