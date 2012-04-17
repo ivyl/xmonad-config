@@ -18,7 +18,7 @@ autocutsel -selection PRIMARY -fork &
 eval `dbus-launch --sh-syntax --exit-with-session`
 
 #apps
-pulseaudio &
+start-pulseaudio-x11
 gnome-screensaver &
 urxvtd &
 
