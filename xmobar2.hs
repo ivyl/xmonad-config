@@ -1,4 +1,4 @@
-Config { font = "xft:Droid Sans Mono Dotted:bold:pixelsize=12"
+Config { font = "xft:Droid Sans Mono Dotted:bold:pixelsize=10"
        , bgColor = "black"
        , fgColor = "grey"
        , position = BottomW L 100
