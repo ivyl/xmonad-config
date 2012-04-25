@@ -38,7 +38,7 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
          , ("M-a" , spawn "urxvtc -e alsamixer" ) -- sound mixer
          , ("M-f" , spawn "firefox" ) -- launch browser
          , ("M-x" , spawn "wxHexEditor" ) -- hex editor
-         , ("M-v" , spawn "gvim" ) -- gvim
+         , ("M-S-v" , spawn "gvim" ) -- gvim
          , ("M-S-h" , spawn "urxvtc -e htop" ) -- htop
          , ("M-S-m" , spawn "urxvtc -e mutt" ) -- mutt
          , ("M-S-a" , spawn "~/.bin/cpu min" ) -- cpu scaling
