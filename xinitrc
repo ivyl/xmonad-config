@@ -22,4 +22,7 @@ pulseaudio &
 gnome-screensaver &
 urxvtd &
 
+#WM name
+wmname LG3D
+
 exec ck-launch-session zsh -c "udiskie & xmonad"
