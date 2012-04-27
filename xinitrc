@@ -5,7 +5,7 @@ xsetroot -cursor_name left_ptr
 xrdb -merge ~/.Xresources
 setxkbmap -layout pl
 xmodmap ~/.xmonad/Xmodmap
-feh --bg-fill feh --bg-fill ~/.xmonad/background
+feh --bg-fill ~/.xmonad/background
 
 #hide mouse coursor when it isn't used
 unclutter &
@@ -17,9 +17,11 @@ autocutsel -selection PRIMARY -fork &
 #dbus instance
 eval `dbus-launch --sh-syntax --exit-with-session`
 
+#fix java issues
+wmname LG3D
+
 #apps
 start-pulseaudio-x11
-gnome-screensaver &
 urxvtd &
 
 exec ck-launch-session zsh -c "udiskie & xmonad"
