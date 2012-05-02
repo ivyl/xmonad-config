@@ -2,6 +2,7 @@
 xsetroot -cursor_name left_ptr
 
 #settings
+xset -b
 xrdb -merge ~/.Xresources
 setxkbmap -layout pl
 xmodmap ~/.xmonad/Xmodmap
