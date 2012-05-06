@@ -2,10 +2,11 @@
 xsetroot -cursor_name left_ptr
 
 #settings
+xset -b
 xrdb -merge ~/.Xresources
 setxkbmap -layout pl
 xmodmap ~/.xmonad/Xmodmap
-feh --bg-fill feh --bg-fill ~/.xmonad/background
+feh --bg-fill ~/.xmonad/background
 
 #hide mouse coursor when it isn't used
 unclutter &
@@ -17,9 +18,11 @@ autocutsel -selection PRIMARY -fork &
 #dbus instance
 eval `dbus-launch --sh-syntax --exit-with-session`
 
+#fix java issues
+wmname LG3D
+
 #apps
-pulseaudio &
-gnome-screensaver &
+start-pulseaudio-x11
 urxvtd &
 
 #WM name
