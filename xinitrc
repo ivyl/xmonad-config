@@ -28,4 +28,7 @@ urxvtd &
 #WM name
 wmname LG3D
 
-exec ck-launch-session zsh -c "udiskie & xmonad"
+#disks automounting
+udiskie &
+
+xmonad
