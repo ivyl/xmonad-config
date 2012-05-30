@@ -21,7 +21,6 @@ main = do
     , normalBorderColor = "#333333"
     , focusedBorderColor = "#666666"
     , logHook = myLogHook din
-    , startupHook = myStartupHook
     , manageHook = manageDocks <+> manageHook defaultConfig
     , layoutHook = avoidStruts  $  layoutHook defaultConfig
     }
@@ -63,7 +62,4 @@ myLogHook h = dynamicLogWithPP xmobarPP
             , ppTitle = xmobarColor "#3399ff" "" --window title color
             }
 
-myStatusBar = "xmobar ~/.xmonad/xmobar1.hs" --define first xmobar
-myStartupHook :: X ()
-myStartupHook = do
-            spawn "xmobar ~/.xmonad/xmobar2.hs" --start second xmobar
+myStatusBar = "xmobar ~/.xmonad/xmobar1.hs"
