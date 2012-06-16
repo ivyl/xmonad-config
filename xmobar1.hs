@@ -8,7 +8,7 @@ Config { font = "xft:Droid Sans Mono Dotted:bold:pixelsize=10"
                     , Run Com "~/.xmonad/bin/temp.sh" [] "temp" 50
                     , Run Com "~/.xmonad/bin/wlan.sh" [] "wireless" 50
                     , Run Com "~/.xmonad/bin/vol.sh" [] "vol" 10
-		    , Run BatteryP ["BAT0"] ["-t", "[<fc=#3399FF><left></fc>] <acstatus>", "--", "-c", "energy_full"] 200
+		    , Run BatteryP ["BAT0"] ["-t", "[<fc=#3399FF><left></fc>] <acstatus>"] 200
                     , Run CpuFreq ["-t","<cpu0>","-L","0","-H","2","-l","green","-n","grey","-h","#3399FF"] 50
                     , Run StdinReader
                     ]
