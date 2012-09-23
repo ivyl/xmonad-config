@@ -33,20 +33,15 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
          , ("M-S-<Down>", shiftToNext ) -- move client to next workspace
          , ("M-S-<Up>" , shiftToPrev ) -- move client to prev workspace
          , ("M-p" , spawn "gmrun" ) -- app launcher
-         , ("M-n" , spawn "wicd-client -n" ) -- network manager
+         , ("M-n" , spawn "wicd-curses" ) -- network manager
          , ("M-a" , spawn "urxvtc -e alsamixer" ) -- sound mixer
          , ("M-z" , spawn "pavucontrol" ) -- pulse audio mixer
          , ("M-f" , spawn "firefox" ) -- launch browser
-         , ("M-x" , spawn "wxHexEditor" ) -- hex editor
          , ("M-S-v" , spawn "gvim" ) -- gvim
-         , ("M-S-h" , spawn "urxvtc -e htop" ) -- htop
-         , ("M-S-m" , spawn "urxvtc -e mutt" ) -- mutt
          , ("M-S-a" , spawn "~/.bin/cpu min" ) -- cpu scaling
          , ("M-S-s" , spawn "~/.bin/cpu med" ) -- cpu scaling
          , ("M-S-d" , spawn "~/.bin/cpu max" ) -- cpu scaling
 	 , ("M-S-l" , spawn "slimlock" ) -- lock screen
-         , ("C-M-<Delete>" , spawn "gksudo shutdown -r now" ) -- reboot
-         , ("C-M-<Insert>" , spawn "gksudo shutdown -h now" ) -- poweroff
          , ("<XF86AudioRaiseVolume>", spawn "amixer -c 0 -- sset Master '2.00dB+'" ) -- volume up
          , ("<XF86AudioLowerVolume>", spawn "amixer -c 0 -- sset Master '1.00dB-'" ) -- volume down
          , ("<XF86Display>", spawn "arandr" )
