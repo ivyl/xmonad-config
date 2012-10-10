@@ -6,6 +6,8 @@ xset -b
 xrdb -merge ~/.Xresources
 setxkbmap -layout pl
 xmodmap ~/.xmonad/Xmodmap
+[ -e ~/.Xmodmap_local ] && xmodmap ~/.Xmodmap_local
+
 feh --bg-fill ~/.xmonad/background
 
 #hide mouse coursor when it isn't used
