@@ -1,3 +1,4 @@
+#!/bin/sh
 #bg
 xsetroot -cursor_name left_ptr
 
