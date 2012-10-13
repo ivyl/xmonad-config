@@ -32,7 +32,7 @@ myKeys = [ ("M1-<Tab>" , cycleRecentWindows [xK_Alt_L] xK_Tab xK_Tab ) -- classi
          , ("M-<Up>" , prevWS ) -- go to prev workspace
          , ("M-S-<Down>", shiftToNext ) -- move client to next workspace
          , ("M-S-<Up>" , shiftToPrev ) -- move client to prev workspace
-         , ("M-p" , spawn "gmrun" ) -- app launcher
+         , ("M-p" , spawn "dmenu_run" ) -- app launcher
          , ("M-n" , spawn "wicd-curses" ) -- network manager
          , ("M-a" , spawn "urxvtc -e alsamixer" ) -- sound mixer
          , ("M-z" , spawn "pavucontrol" ) -- pulse audio mixer
